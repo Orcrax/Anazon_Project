@@ -17,7 +17,7 @@ class UserListener
 
     public function hashPassword(User $user)
     {
-        if (!$user->plainPassword) {
+        if (!$user->getPlainPassword()) {
             return;
         }
 
