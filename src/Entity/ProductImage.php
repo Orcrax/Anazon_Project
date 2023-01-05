@@ -4,10 +4,12 @@ namespace App\Entity;
 
 use App\Repository\ProductImageRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 
 #[ORM\Entity(repositoryClass: ProductImageRepository::class)]
 class ProductImage
 {
+    use TimestampableEntity;
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
